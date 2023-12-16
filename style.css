@@ -17,7 +17,10 @@ body {
 }
 
 @media screen and (min-width:720px) {
-
+  body{
+    overflow-x:hidden;
+    /* some additional overflow was casued due to addition of projects etc so we hidden it */
+  }
   /* desktop css */
   #banner {
     height: 80dvh;
