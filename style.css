@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width:720px) {
+  /* android ios css styles */
+}
+
+@media screen and (min-width:720px) {
+
+  /* desktop css */
+  #banner {
+    height: 80dvh;
+    width: 100dvw;
+    background: url("./blob-scene-haikei.svg");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 75dvw 25dvw;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    border-bottom-left-radius: 5dvw;
+    border-bottom-right-radius: 5dvw;
+    overflow: hidden;
+    animation: temp infinite 3s linear;
+  }
+
+  @keyframes temp {
+    50% {
+      background: url("./temp.svg");
+      background-size: cover;
+    }
+  }
+
+  #profileimgside img {
+    height: 77dvh;
+    margin-top: 2.99dvh;
+  }
+
+  #profileimgside {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+  }
+
+  /* banner text */
+  #conwrapper {
+    padding: 10dvw 5dvw 5dvw 10dvw;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.5dvw;
+    font-weight: 900;
+  }
+
+  #conwrapper h1 {
+    font-family: 'Pacifico', 'Montserrat', sans-serif;
+    font-size: 3dvw;
+  }
+
+  /* projects */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    padding: 10dvh;
+    overflow: hidden;
+  }
+
+  #projects header {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 4vw;
+    margin: 5dvh 0dvh 7dvh 0dvh;
+  }
+
+  #projects-container {
+    display: flex;
+    width: 95dvw;
+    padding: 5dvw;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card {
+    height: 30dvw;
+    width: 20dvw;
+    border: 1px solid rgb(232, 232, 232);
+    box-shadow: 1dvw 1dvw 1dvw rgb(183, 183, 183);
+    font-size: 1.5dvw;
+    padding: 3dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1dvw;
+    animation: glass 1s infinite linear;
+    position: relative;
+    overflow: hidden;
+  }
+  /* shining animation */
+  .card span {
+    position: absolute;
+    height: 100dvw;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    animation: temp2 3s ease-in-out infinite;
+    translate: -2dvw -15dvw;
+  }
+
+  @keyframes temp2 {
+    0% {
+      width: 1dvw;
+      transform: rotateZ(10deg);
+      backdrop-filter: blur(1px);
+      box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+      width: 20dvw;
+      transform: rotateZ(-90deg);
+      box-shadow: 0 5px 100px rgba(0, 0, 0, 0);
+    }
+  }
+
+  .card h1 {
+    font-size: 2dvw;
+  }
+
+  .card button {
+    height: 3dvw;
+    width: 10dvw;
+    border: none;
+    outline: none;
+    background: rgb(246, 246, 246);
+    border: 1dvw solid rgb(246, 246, 246);
+    border-radius: 0.1dvw;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translate(0dvw, -5dvw);
+    transition: transform 0.3s linear;
+  }
+
+  .card:hover~.card {
+    transform: translateX(2dvw);
+    transition: transform 0.3s linear;
+  }
+
+  /* socials */
+  #socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    background: url("./footerbg.svg");
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    border-top: 1px solid white;
+    border-top-left-radius: 100dvw;
+    border-top-right-radius: 100dvw;
+    animation: socialanim 5s linear infinite;
+  }
+
+  @keyframes socialanim {
+    50% {
+      background-position: center;
+    }
+
+    100% {
+      background-position: top;
+    }
+  }
+
+  #socials header {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 4dvw;
+  }
+
+  #socials p {
+    font-family: "Montserrat", serif;
+    font-size: 2dvw;
+    margin: 1dvw;
+  }
+
+  #icon img {
+    height: 10vw;
+    width: 10vw;
+    background: white;
+    border: 1dvw solid white;
+    border-radius: 2dvw;
+  }
+
+  #socials-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 2dvw;
+    width: 100dvw;
+  }
+}
