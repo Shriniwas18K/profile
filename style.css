@@ -11,7 +11,36 @@ body {
   height: 100%;
   width: 100%;
 }
-
+#loading-screen{
+  height: 100vh;
+  width: 100vw;
+  background: url(footerbg.svg);
+  background-size: cover;
+  color: white;
+  font-family: 'Pacifico',sans-serif;
+  animation: loading 5s infinite ease;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes loading{
+  0%{
+    font-size: 5vh;
+    background-position: top;
+  }
+  50%{
+    font-size: 10vh;
+    background-position:center;
+  }
+  100%{
+    font-size: 5vh;
+    background-position: top;
+  }
+}
 @media screen and (min-width:720px) {
   body {
     overflow-x: hidden;
@@ -212,14 +241,14 @@ body {
 /* android css */
 @media screen and (max-width:720px) {
   #banner {
-    height: 85dvh;
-    width: 100dvw;
+    height: 85vh;
+    width: 100vw;
     background: url("./temp.svg");
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid white;
-    border-bottom-left-radius: 50dvw;
-    border-bottom-right-radius: 50dvw;
+    border-bottom-left-radius: 50vw;
+    border-bottom-right-radius: 50vw;
     overflow: hidden;
     animation: banneranimandr infinite 3s ease-out;
     background-repeat: no-repeat;
@@ -227,51 +256,50 @@ body {
 
   @keyframes banneranimandr {
     0% {
-      background-position: -350dvw 0dvw;
+      background-position: -250vw 0dvw;
     }
-
     100% {
-      background-position: -560dvw 0dvw;
+      background-position: -560vw 0dvw;
     }
   }
 
   #profileimgside {
     position: absolute;
-    top: 20dvh;
-    right: 0dvh;
+    top: 20vh;
+    right: 0vh;
     overflow: hidden;
   }
 
   #profileimgside img {
-    height: 65dvh;
-    border-bottom-right-radius: 50dvw;
-    border-bottom-left-radius: 22dvw;
+    height: 65vh;
+    border-bottom-right-radius: 50vw;
+    border-bottom-left-radius: 22vw;
   }
 
   #conwrapper h1 {
     position: absolute;
-    top: 5dvh;
-    left: 5dvh;
-    font-size: 7dvh;
-    line-height: 7dvh;
+    top: 5vh;
+    left: 5vh;
+    font-size: 7vh;
+    line-height: 7vh;
     font-family: 'Pacifico';
     color: white;
   }
 
   #conwrapper p {
     position: absolute;
-    top: 90dvh;
+    top: 90vh;
     z-index: 90;
     font-family: 'Montserrat', serif;
-    padding: 5dvh;
+    padding: 5vh;
   }
 
   /* we will keep projects section at last */
   #socials {
     position: absolute;
-    top: 200dvh;
+    top: 200vh;
     background: url("./footerbg.svg");
-    width: 100dvw;
+    width: 100vw;
     color: white;
     display: flex;
     flex-direction: column;
@@ -280,7 +308,7 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     animation: socialandranim 3s linear infinite;
     border: 1px solid white;
-    border-radius: 10dvh;
+    border-radius: 10vh;
   }
 
   @keyframes socialandranim {
@@ -290,60 +318,60 @@ body {
   }
 
   #socials header {
-    font-size: 10dvh;
+    font-size: 10vh;
     font-family: 'Pacifico', serif;
   }
 
   #socials-wrapper {
-    width: 100dvw;
+    width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5dvh;
+    padding: 5vh;
   }
 
   #icon img {
     background: white;
-    border: 1dvh solid white;
-    border-radius: 10dvh;
-    margin: 1dvh;
+    border: 1vh solid white;
+    border-radius: 10vh;
+    margin: 1vh;
   }
 
   /* projects */
   #projects {
     position: absolute;
-    top: 260dvh;
+    top: 260vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100dvw;
-    padding: 10dvh;
+    width: 100vw;
+    padding: 10vh;
   }
 
   #projects header {
     font-family: 'Pacifico', sans-serif;
     font-size: 15vw;
-    margin: 5dvh 0dvh 7dvh 0dvh;
+    margin: 5vh 0vh 7vh 0vh;
   }
 
   #projects-container {
     display: flex;
     flex-direction: column;
-    padding: 1dvw;
-    width: 100dvw;
+    padding: 1vw;
+    width: 100vw;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-evenly;
   }
 
   .card {
-    height: 80dvh;
-    width: 90dvw;
+    height: 80vh;
+    width: 90vw;
     border: 1px solid rgb(232, 232, 232);
-    box-shadow: 1dvw 1dvw 1dvw rgb(183, 183, 183);
-    font-size: 8dvw;
-    padding: 3dvh;
-    margin: 1dvh;
+    box-shadow: 1vw 1vw 1vw rgb(183, 183, 183);
+    font-size: 8vw;
+    padding: 3vh;
+    margin: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -358,36 +386,36 @@ body {
     outline: none;
     border: 1px solid white;
     animation: cardanimandr 3s ease-in-out infinite;
-    translate: -10dvw 40dvh;
+    translate: -10vw 40vh;
   }
 
   @keyframes cardanimandr {
     0% {
-      height: 0dvh;
-      width: 0dvw;
+      height: 0vh;
+      width: 0vw;
       box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
 
     100% {
-      height: 160dvh;
-      width: 95dvw;
-      border-top-right-radius: 100dvh;
+      height: 160vh;
+      width: 95vw;
+      border-top-right-radius: 100vh;
       box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
   }
 
   .card h1 {
-    font-size: 10dvw;
+    font-size: 10vw;
   }
 
   .card button {
-    height: 5dvh;
-    width: 10dvh;
+    height: 5vh;
+    width: 10vh;
     border: none;
     outline: none;
     background: rgb(246, 246, 246);
-    border: 1dvw solid rgb(246, 246, 246);
-    border-radius: 0.1dvw;
+    border: 1vw solid rgb(246, 246, 246);
+    border-radius: 0.1vw;
     cursor: pointer;
   }
 }
