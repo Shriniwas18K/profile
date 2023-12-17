@@ -12,15 +12,12 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width:720px) {
-  /* android ios css styles */
-}
-
 @media screen and (min-width:720px) {
-  body{
-    overflow-x:hidden;
+  body {
+    overflow-x: hidden;
     /* some additional overflow was casued due to addition of projects etc so we hidden it */
   }
+
   /* desktop css */
   #banner {
     height: 80dvh;
@@ -35,10 +32,10 @@ body {
     border-bottom-left-radius: 5dvw;
     border-bottom-right-radius: 5dvw;
     overflow: hidden;
-    animation: temp infinite 3s linear;
+    animation: banneranim infinite 3s linear;
   }
 
-  @keyframes temp {
+  @keyframes banneranim {
     50% {
       background: url("./temp.svg");
       background-size: cover;
@@ -104,33 +101,33 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 1dvw;
-    animation: glass 1s infinite linear;
     position: relative;
     overflow: hidden;
   }
+
   /* shining animation */
   .card span {
     position: absolute;
-    height: 100dvw;
     background: rgba(255, 255, 255, 0.2);
     outline: none;
-    border: none;
-    animation: temp2 3s ease-in-out infinite;
-    translate: -2dvw -15dvw;
+    border: 1px solid white;
+    animation: cardanim 3s ease-in-out infinite;
+    translate: -3dvw 17dvw;
+
   }
 
-  @keyframes temp2 {
+  @keyframes cardanim {
     0% {
-      width: 1dvw;
-      transform: rotateZ(10deg);
-      backdrop-filter: blur(1px);
+      width: 0dvw;
+      height: 0dvw;
       box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
 
     100% {
-      width: 20dvw;
-      transform: rotateZ(-90deg);
-      box-shadow: 0 5px 100px rgba(0, 0, 0, 0);
+      height: 90dvw;
+      width: 30dvw;
+      border-top-right-radius: 100dvw;
+      box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -210,5 +207,187 @@ body {
     align-content: center;
     padding: 2dvw;
     width: 100dvw;
+  }
+}
+/* android css */
+@media screen and (max-width:720px) {
+  #banner {
+    height: 85dvh;
+    width: 100dvw;
+    background: url("./temp.svg");
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    border-bottom-left-radius: 50dvw;
+    border-bottom-right-radius: 50dvw;
+    overflow: hidden;
+    animation: banneranimandr infinite 3s ease-out;
+    background-repeat: no-repeat;
+  }
+
+  @keyframes banneranimandr {
+    0% {
+      background-position: -350dvw 0dvw;
+    }
+
+    100% {
+      background-position: -560dvw 0dvw;
+    }
+  }
+
+  #profileimgside {
+    position: absolute;
+    top: 20dvh;
+    right: 0dvh;
+    overflow: hidden;
+  }
+
+  #profileimgside img {
+    height: 65dvh;
+    border-bottom-right-radius: 50dvw;
+    border-bottom-left-radius: 22dvw;
+  }
+
+  #conwrapper h1 {
+    position: absolute;
+    top: 5dvh;
+    left: 5dvh;
+    font-size: 7dvh;
+    line-height: 7dvh;
+    font-family: 'Pacifico';
+    color: white;
+  }
+
+  #conwrapper p {
+    position: absolute;
+    top: 90dvh;
+    z-index: 90;
+    font-family: 'Montserrat', serif;
+    padding: 5dvh;
+  }
+
+  /* we will keep projects section at last */
+  #socials {
+    position: absolute;
+    top: 200dvh;
+    background: url("./footerbg.svg");
+    width: 100dvw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    animation: socialandranim 3s linear infinite;
+    border: 1px solid white;
+    border-radius: 10dvh;
+  }
+
+  @keyframes socialandranim {
+    100% {
+      background-position: bottom;
+    }
+  }
+
+  #socials header {
+    font-size: 10dvh;
+    font-family: 'Pacifico', serif;
+  }
+
+  #socials-wrapper {
+    width: 100dvw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5dvh;
+  }
+
+  #icon img {
+    background: white;
+    border: 1dvh solid white;
+    border-radius: 10dvh;
+    margin: 1dvh;
+  }
+
+  /* projects */
+  #projects {
+    position: absolute;
+    top: 260dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    padding: 10dvh;
+  }
+
+  #projects header {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 15vw;
+    margin: 5dvh 0dvh 7dvh 0dvh;
+  }
+
+  #projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1dvw;
+    width: 100dvw;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    height: 80dvh;
+    width: 90dvw;
+    border: 1px solid rgb(232, 232, 232);
+    box-shadow: 1dvw 1dvw 1dvw rgb(183, 183, 183);
+    font-size: 8dvw;
+    padding: 3dvh;
+    margin: 1dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* shining animation */
+  .card span {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: 1px solid white;
+    animation: cardanimandr 3s ease-in-out infinite;
+    translate: -10dvw 40dvh;
+  }
+
+  @keyframes cardanimandr {
+    0% {
+      height: 0dvh;
+      width: 0dvw;
+      box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+      height: 160dvh;
+      width: 95dvw;
+      border-top-right-radius: 100dvh;
+      box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card h1 {
+    font-size: 10dvw;
+  }
+
+  .card button {
+    height: 5dvh;
+    width: 10dvh;
+    border: none;
+    outline: none;
+    background: rgb(246, 246, 246);
+    border: 1dvw solid rgb(246, 246, 246);
+    border-radius: 0.1dvw;
+    cursor: pointer;
   }
 }
