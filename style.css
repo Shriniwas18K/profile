@@ -41,7 +41,7 @@ body {
     background-position: top;
   }
 }
-@media screen and (min-width:720px) {
+@media screen and (min-width:580px) {
   body {
     overflow-x: hidden;
     /* some additional overflow was casued due to addition of projects etc so we hidden it */
@@ -49,14 +49,14 @@ body {
 
   /* desktop css */
   #banner {
-    height: 80dvh;
+    height: fit-content;
     width: 100dvw;
     background: url("./blob-scene-haikei.svg");
     background-size: cover;
     display: grid;
     grid-template-columns: 75dvw 25dvw;
-    align-items: center;
-    justify-content: center;
+    align-items:end;
+    justify-content:right;
     border-bottom: 1px solid white;
     border-bottom-left-radius: 5dvw;
     border-bottom-right-radius: 5dvw;
@@ -70,16 +70,14 @@ body {
       background-size: cover;
     }
   }
-
-  #profileimgside img {
-    height: 77dvh;
-    margin-top: 2.99dvh;
-  }
-
-  #profileimgside {
+  #profileimgside{
+    padding: 0;
     display: flex;
     align-items: flex-end;
     justify-content: right;
+  }
+  #profileimgside img {
+    height: clamp(8cm,77dvh,77dvh);
   }
 
   /* banner text */
@@ -87,7 +85,7 @@ body {
     padding: 10dvw 5dvw 5dvw 10dvw;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 1.5dvw;
+    font-size: clamp(14px,1.5dvw,1.5dvw);
     font-weight: 900;
   }
 
@@ -239,65 +237,59 @@ body {
   }
 }
 /* android css */
-@media screen and (max-width:720px) {
+@media screen and (max-width:580px) {
   #banner {
-    height: 85vh;
+    height: fit-content;
     width: 100vw;
     background: url("./temp.svg");
-    align-items: center;
-    justify-content: center;
     border-bottom: 1px solid white;
     border-bottom-left-radius: 50vw;
     border-bottom-right-radius: 50vw;
     overflow: hidden;
     animation: banneranimandr infinite 3s ease-out;
     background-repeat: no-repeat;
+    position: relative;
+    background-size:cover;
   }
 
   @keyframes banneranimandr {
     0% {
-      background-position: -250vw 0dvw;
+      background-position: left;
     }
     100% {
-      background-position: -560vw 0dvw;
+      background-position: right;
     }
-  }
-
-  #profileimgside {
-    position: absolute;
-    top: 20vh;
-    right: 0vh;
-    overflow: hidden;
   }
 
   #profileimgside img {
     height: 65vh;
-    border-bottom-right-radius: 50vw;
-    border-bottom-left-radius: 22vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   #conwrapper h1 {
     position: absolute;
     top: 5vh;
     left: 5vh;
-    font-size: 7vh;
+    font-size:x-large;
+    letter-spacing: 1px;
     line-height: 7vh;
     font-family: 'Pacifico';
     color: white;
   }
 
   #conwrapper p {
-    position: absolute;
-    top: 90vh;
-    z-index: 90;
     font-family: 'Montserrat', serif;
-    padding: 5vh;
+    color: white;
+    padding: 13vh 5vh 70vh 5vh;
+    font-size: 2.5vh;
   }
 
   /* we will keep projects section at last */
   #socials {
     position: absolute;
-    top: 200vh;
+    top: 150vh;
     background: url("./footerbg.svg");
     width: 100vw;
     color: white;
@@ -341,7 +333,7 @@ body {
   /* projects */
   #projects {
     position: absolute;
-    top: 260vh;
+    top: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -391,15 +383,15 @@ body {
 
   @keyframes cardanimandr {
     0% {
-      height: 0vh;
-      width: 0vw;
+      height: 0px;
+      width: 0px;
       box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
 
     100% {
-      height: 160vh;
-      width: 95vw;
-      border-top-right-radius: 100vh;
+      height: 1200px;
+      width: 1000px;
+      border-top-right-radius: 1000px;
       box-shadow: 0 5px 100px rgba(0, 0, 0, 0.1);
     }
   }
