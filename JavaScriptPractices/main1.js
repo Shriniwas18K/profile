@@ -1,15 +1,20 @@
 // INHERITANCE
 // by default every object we create in js has its
-// parent object called as its prototype which can be
+// parent object called as its `[[Prototype]]` which can be
 // seen using 
 // console.log(Object.getPrototypeOf(childObject))
-// this chaining goes till last parent object which is null
+
+
 
 // In js concept of inheritance is completely diffirent and occurs everywhere silently
 
 // here by default the child object gets all the properties and methods of parent object
 // once we manually set parent object , or even of default parent object's too
 // the methods and properties go inside child
+
+// NOTE : The parent object of any object(say O) is called `[[Prototype]]` and 
+// it is treated as value of the property .__proto__,which it has inherited from Object ( built in object of js)
+
 
 // whenever any method uses   "this" keyword then it only refers to object that has called it
 // not to anyone of its parent or child objects
